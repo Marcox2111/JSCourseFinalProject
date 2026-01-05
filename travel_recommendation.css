@@ -137,6 +137,14 @@ nav ul li a {
 }
 
 /*  Content */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 5vw;
+    padding-right: 5vw;
+}
+
 .hero-content {
     margin-left: 15vw;
     margin-top: 20vh;
@@ -198,6 +206,93 @@ nav ul li a {
 
 .btn-book:hover {
     background: #006666;
+}
+
+.results-panel {
+    margin-top: 12vh;
+    width: 40vw;
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 15px;
+    max-height: 75vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.results-header {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.results-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.result-card {
+    background: white;
+    color: #0e3a51;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.result-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+.result-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.result-body {
+    padding: 12px 14px 16px;
+}
+
+.result-body h3 {
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.result-body p {
+    color: #35515f;
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+.visit-btn {
+    background: #008080;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s ease;
+}
+
+.visit-btn:hover {
+    background: #006666;
+}
+
+.no-results {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #e1e8ed;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.4;
 }
 
 .contact-hero {

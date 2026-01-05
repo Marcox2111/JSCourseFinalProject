@@ -29,7 +29,7 @@
         </ul>
       
         <form class="search-bar">
-            <input type="text" placeholder="Enter a destination or keyword" />
+            <input id="searchInput" type="text" placeholder="Enter a destination or keyword" />
             <button id="btnSearch" type="submit">Search</button>
             <button id="btnClear" type="reset">Clear</button>
         </form>
@@ -52,7 +52,13 @@
       
             <button class="btn-book">BOOK NOW</button>
         </div>
+
+        <div class="results-panel">
+            <div class="results-header">Recommendations</div>
+            <div id="results" class="results-list"></div>
+        </div>
     </section>
 
+    <script src="travel_recommendation.js"></script>
 </body>
 </html>
