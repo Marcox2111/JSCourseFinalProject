@@ -1,0 +1,88 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 32px;
+  background: linear-gradient(90deg, #023437, #035056);
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Brand */
+.brand {
+  font-size: 20px;
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Navigation links */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Search container */
+nav form {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: white;
+  padding: 6px 10px;
+  border-radius: 30px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.25);
+}
+
+nav input[type="text"] {
+  border: none;
+  outline: none;
+  font-size: 13px;
+}
+
+/* Buttons */
+#btnSearch,
+#btnClear {
+  border: none;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+#btnSearch {
+  background: #027c7b;
+  color: white;
+}
+
+#btnClear {
+  background: #ffffff;
+  color: #027c7b;
+  border: 1px solid #027c7b;
+}
+
+/* Mobile behavior */
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  nav form {
+    flex: 1;
+  }
+}
