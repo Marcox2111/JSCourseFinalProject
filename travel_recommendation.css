@@ -1,88 +1,230 @@
+/* Base Styles */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body.about-page {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to left,rgba(0,0,0,0.0), rgba(14, 58, 81, 0.5)), url("images/italy.jpg"); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    min-height: 100vh;
+}
+
+body.home-page {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to left,rgba(0,0,0,0.0), rgba(14, 58, 81, 0.5)), url("images/italy.jpg"); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    min-height: 100vh;
+}
+
+/* Navbar Styling */
 nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px 32px;
-  background: linear-gradient(90deg, #023437, #035056);
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 6vh;
+    padding: 15px 50px;
+    background: rgba(0, 0, 0, 0.3);
 }
 
-/* Brand */
 .brand {
-  font-size: 20px;
-  font-weight: 700;
-  font-style: italic;
+    font-size: 25px;
+    align-items: center;
+    justify-content: left;
 }
 
-/* Navigation links */
 nav ul {
-  list-style: none;
-  display: flex;
-  gap: 28px;
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
 }
 
 nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-nav ul li a:hover {
-  text-decoration: underline;
+
+/* Search Bar Container */
+.search-bar {
+    background: white;
+    display: flex;
+    align-items: center;
+    height: 90%;     
+    border-radius: 25px;
+    padding: 0 15px; 
+    overflow: hidden; 
 }
 
-/* Search container */
-nav form {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background: white;
-  padding: 6px 10px;
-  border-radius: 30px;
-  box-shadow: 0 0 6px rgba(0,0,0,0.25);
+/* The Input Field */
+.search-bar input {
+    flex: 1;        
+    height: 100%;   
+    width: 20vw; 
+    border: none;
+    outline: none;
+    background: transparent;
+    padding-left: 10px;
 }
 
-nav input[type="text"] {
-  border: none;
-  outline: none;
-  font-size: 13px;
-}
-
-/* Buttons */
-#btnSearch,
-#btnClear {
-  border: none;
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 12px;
-  cursor: pointer;
-  font-weight: 500;
+/* Buttons inside the bar */
+#btnSearch, #btnClear {
+    border: none;
+    padding: 5px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 5px;
+    height: 80%;    
 }
 
 #btnSearch {
-  background: #027c7b;
-  color: white;
+    background: #008080;
+    color: white;
 }
 
 #btnClear {
-  background: #ffffff;
-  color: #027c7b;
-  border: 1px solid #027c7b;
+    background: transparent;
+    color: #008080;
+    border: 1px solid #008080;
 }
 
-/* Mobile behavior */
-@media (max-width: 768px) {
-  nav {
-    flex-wrap: wrap;
-    gap: 10px;
-  }
+/* Vertical Side Bar */
+.side-bar {
+    position: absolute;
+    left: 30px;
+    top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
 
-  nav ul {
-    display: none;
-  }
+.side-bar .line {
+    width: 2px;
+    height: 100px;
+    background: white;
+    margin-bottom: 20px;
+}
 
-  nav form {
-    flex: 1;
-  }
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+/*  Content */
+.hero-content {
+    margin-left: 15vw;
+    margin-top: 20vh;
+    max-width: 30vw;
+}
+
+.about-hero{
+    margin-left: 8vw;
+    margin-top: 5vh;
+    max-width: 70vw;
+}
+
+.title-box h1 {
+    font-size: 9vh;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 30px;
+}
+
+.about-hero h1 {
+    font-size: 9vh;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 30px;
+}
+
+.about-hero div {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 22px;
+    line-height: 1.5;
+    max-width: 70vw;
+    font-weight: 400; 
+}
+
+.description-box {
+    background: rgba(0, 0, 0, 0);
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 25px;
+    line-height: 1.5;
+    max-width: 20vw;
+    font-weight: 600;
+}
+
+.btn-book {
+    background: #008080;
+    color: white;
+    border: none;
+    padding: 20px 30px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.btn-book:hover {
+    background: #006666;
+}
+
+.team-section {
+    margin-left: 10vw;
+    margin-top: 5vh;
+    max-width: 70vw;
+}
+
+/* Team Section */
+.team-section h2 { font-size: 6vh; margin-bottom: 20px; }
+
+.team-grid {
+  display: flex;
+  gap: 20px;
+  background: rgba(0, 0, 0, 0.5); /* The red box area in your image */
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.team-card {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.card-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.card-header i { font-size: 24px; color: #4a90e2; }
+
+.role-badge {
+  display: inline-block;
+  margin-top: 15px;
+  background: #3b5998;
+  padding: 5px 20px;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 100%;
+  text-align: center;
 }
